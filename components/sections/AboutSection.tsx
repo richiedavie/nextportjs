@@ -1,4 +1,3 @@
-import React from "react";
 import Image from "next/image";
 
 export function AboutSection() {
@@ -25,10 +24,10 @@ export function AboutSection() {
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white">About me</h2>
           <div className="mt-6 flex flex-col gap-5 max-w-xl text-base sm:text-lg text-[#c4c7c8] leading-relaxed">
             <p>
-              I&apos;m a web developer and creator focused on creating responsive, accessible, and high-performance digital experiences. My work sits at the intersection of clean system architecture and nuanced frontend details.
+              Hello! My name is Jer! , but you can call me Jeremy. I am passionate about coding and constantly eager to learn new technologies and improve my skills. I enjoy exploring different programming languages and frameworks, and I am particularly skilled in HTML, CSS, JavaScript, and Bootstrap. Over time, I have developed a strong foundation in web development and love creating interactive and user-friendly websites. When I'm not coding, I like to experiment with mini-games and other creative projects. I am always excited to take on new challenges and grow as a developer.
             </p>
             <p>
-              Whether architecting scalable Next.js applications or refining typography and interaction systems, I value clarity, precision, and minimalism.
+              I use arch btw
             </p>
           </div>
         </div>
