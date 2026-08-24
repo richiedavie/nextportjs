@@ -1,7 +1,6 @@
-import React from "react";
-import Link from "next/link";
 import { DesktopNav } from "@/components/navigation/DesktopNav";
 import { MobileNav } from "@/components/navigation/MobileNav";
+import Link from "next/link";
 
 export function SiteHeader() {
   return (
@@ -21,7 +20,7 @@ export function SiteHeader() {
         {/* Right CTA / Mobile Trigger */}
         <div className="flex items-center gap-3">
           <a
-            href="/resume.pdf"
+            href="images/CV ATS Jeremy Mauretz.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="hidden md:inline-flex items-center justify-center px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-white border border-white/10 bg-white/[0.03] hover:bg-white/[0.08] hover:border-white/25 rounded-full transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40"

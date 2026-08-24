@@ -1,7 +1,7 @@
 "use client";
 
-import React, { useRef, useState, useCallback, useSyncExternalStore } from "react";
 import Image from "next/image";
+import React, { useCallback, useRef, useState, useSyncExternalStore } from "react";
 
 function subscribeReducedMotion(callback: () => void) {
   if (typeof window === "undefined") return () => {};
@@ -86,7 +86,7 @@ export function HeroVisual() {
         {/* Inner container for image and overlays */}
         <div className="relative w-full h-full rounded-[22px] sm:rounded-[26px] overflow-hidden bg-[#0e0e0e]">
           <Image
-            src="/images/avatar.webp"
+            src="/images/download (28)_waifu2x_noise1_scale4x.png"
             alt="Jerry — Web Developer & Creator"
             fill
             priority
