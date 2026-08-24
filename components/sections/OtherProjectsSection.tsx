@@ -1,33 +1,46 @@
 import React from "react";
+import Image from "next/image";
 
-interface Project {
+interface ExampleProject {
   title: string;
   tag: string;
   description: string;
+  image?: string;
   technologies: string[];
 }
 
-const otherProjects: Project[] = [
+const exampleProjects: ExampleProject[] = [
   {
-    title: "Realtime Collaboration Canvas",
-    tag: "Open Source",
+    title: "Terahome Fiber Internet",
+    tag: "Web App",
     description:
-      "A lightweight collaborative drawing and whiteboard tool with WebSockets and CRDT sync.",
-    technologies: ["React", "TypeScript", "WebSockets"],
+      "High-speed fiber internet provider portal with real-time speed checker, plan selector, and subscriber dashboard.",
+    image: "/images/terahome.png",
+    technologies: ["Next.js", "Tailwind CSS", "TypeScript"],
   },
   {
-    title: "CLI Developer Toolkit",
-    tag: "Developer Tool",
+    title: "System Debloater & Optimizer",
+    tag: "Utility Tool",
     description:
-      "A fast command-line interface for scaffolding modular Next.js and Tailwind applications.",
-    technologies: ["Node.js", "TypeScript", "Commander"],
+      "Automated system utility to remove bloatware, disable telemetry, and optimize system background resource consumption.",
+    image: "/images/Debloat.png",
+    technologies: ["PowerShell", "Batch", "CLI"],
   },
   {
-    title: "Micro-Interaction Experiments",
-    tag: "Creative Coding",
+    title: "PawShop Pet Care & Store",
+    tag: "E-Commerce",
     description:
-      "A collection of physics-based UI components, cursor trails, and subtle parallax effects.",
-    technologies: ["CSS", "HTML5 Canvas", "WebGL"],
+      "Modern pet supplies store and veterinary clinic appointment scheduling interface with cart management.",
+    image: "/images/pawshop.png",
+    technologies: ["React", "CSS Modules", "JavaScript"],
+  },
+  {
+    title: "Clean The Room Minigame",
+    tag: "Game Dev",
+    description:
+      "An interactive arcade minigame focused on obstacle avoidance, score multipliers, and fast-paced controls.",
+    image: "/images/cleantheroom.png",
+    technologies: ["Scratch", "Game Logic", "Canvas"],
   },
 ];
 
@@ -45,29 +58,42 @@ export function OtherProjectsSection() {
             </h2>
           </div>
           <p className="text-sm text-[#c4c7c8]/80 max-w-sm">
-            Open-source utilities, experimental web canvases, and developer tooling.
+            A collection of side projects, experiments, utilities, and experimental interfaces.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {otherProjects.map((project, idx) => (
+        {/* Grid of Example Project Boxes */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+          {exampleProjects.map((project, idx) => (
             <div
               key={idx}
-              className="group relative flex flex-col justify-between p-7 rounded-2xl bg-white/[0.02] border border-white/[0.08] hover:border-white/20 hover:bg-white/[0.04] transition-all duration-300"
+              className="group relative flex flex-col justify-between p-6 sm:p-7 rounded-[26px] bg-[#0e0e0e]/70 backdrop-blur-xl border border-white/[0.09] hover:border-white/20 transition-all duration-300 shadow-[0_4px_30px_rgba(0,0,0,0.4)]"
             >
               <div>
-                <div className="flex items-center justify-between text-xs text-[#c4c7c8]/60 mb-4">
+                <div className="flex items-center justify-between text-xs text-[#c4c7c8]/60 mb-3">
                   <span className="px-2.5 py-0.5 rounded-full bg-white/[0.04] border border-white/[0.08] text-[#c4c7c8]/80 font-mono text-[11px]">
                     {project.tag}
                   </span>
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">
+                <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-white mb-2">
                   {project.title}
                 </h3>
-                <p className="text-sm text-[#c4c7c8] leading-relaxed font-normal mb-6">
+                <p className="text-xs sm:text-sm text-[#c4c7c8] leading-relaxed font-normal mb-6">
                   {project.description}
                 </p>
               </div>
+
+              {project.image && (
+                <div className="relative w-full aspect-[16/10] rounded-xl sm:rounded-2xl overflow-hidden bg-[#0a0a0a] border border-white/[0.08] group-hover:border-white/20 transition-colors mb-6">
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 560px"
+                    className="object-contain filter contrast-[1.02] brightness-95 group-hover:brightness-100 transition-all duration-500"
+                  />
+                </div>
+              )}
 
               <div>
                 <div className="flex flex-wrap gap-1.5 pt-4 border-t border-white/[0.06]">

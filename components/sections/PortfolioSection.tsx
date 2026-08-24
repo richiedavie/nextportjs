@@ -42,6 +42,30 @@ const portfolioItems: PortfolioItem[] = [
     image: "/images/ProjectHandDetection.png",
     alt: "Project Hand Detection [ID]",
   },
+  {
+    title: "Project Polri Mobile",
+    date: "June 2026",
+    description:
+      "This interface is a responsive, user-friendly Public Incident Reporting Dashboard designed for a modern law enforcement portal to streamline how citizens file and track complaints. The layout features a personalized welcome banner displaying verified user credentials, a dynamic metrics panel with real-time status cards (tracking Total, In Progress, and Completed cases), and an intuitive empty-state interface with a clear Call-to-Action (CTA) button to encourage immediate report creation. Optimized for clarity and high accessibility, this dashboard ensures that users of all technical levels can effortlessly navigate the platform and securely communicate with authorities.",
+    image: "/images/ProjectPolriMobile.png",
+    alt: "Project Polri Mobile",
+  },
+  {
+    title: "Project Dino Website",
+    date: "December 2025",
+    description:
+      "Dino Wallet is a modern digital donation box that automatically and systematically counts the amount of money collected. The app is designed to streamline the process of collecting, recording, and reporting donations, making it more transparent, efficient, and accurate. Dino's Wallet was created to allow us to voluntarily help those in need. It involves donating money without expecting anything in return. In a social context, donations are a form of compassion that plays a vital role in bringing about positive change in society.",
+    image: "/images/ProjectDinoWebsite.png",
+    alt: "Project Dino Website",
+  },
+  {
+    title: "Blender Animating 3D",
+    date: "June 2025",
+    description:
+      "A professional product visualization featuring three beverage bottles. This animation focuses on multi-camera switching and dynamic rotation to showcase the product from various angles within a clean, studio-lit environment.",
+    image: "/images/BlenderAnimating3D.png",
+    alt: "Blender Animating 3D",
+  },
 ];
 
 export function PortfolioSection() {
@@ -58,11 +82,11 @@ export function PortfolioSection() {
             </h2>
           </div>
           <p className="text-sm text-[#c4c7c8]/80 max-w-sm">
-            Showcase of featured web applications, replicas, interactive minigames, and computer vision projects.
+            Showcase of featured web applications, replicas, interactive minigames, computer vision systems, and 3D animations.
           </p>
         </div>
 
-        {/* 2x2 Grid of Cards */}
+        {/* Responsive Grid of Cards */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
           {portfolioItems.map((item, idx) => (
             <div
