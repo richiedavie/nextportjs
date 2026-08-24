@@ -1,33 +1,46 @@
-import React from "react";
 
 interface ExperienceItem {
   role: string;
-  company: string;
   period: string;
   description: string;
 }
 
 const experiences: ExperienceItem[] = [
   {
-    role: "Senior Frontend Developer / Creator",
-    company: "Freelance & Independent",
-    period: "2024 — Present",
+    role: "My first experience on VSCode [Grade 7th]",
+    period: "13 July 2022",
     description:
-      "Designing and architecting high-performance web products, interactive user interfaces, and modular design systems for modern digital platforms.",
+      "When I first entered 7th grade, I had experience using VScode. Well, it was still very basic for the lessons because I only learned HTML and CSS. Even though it was only those two programming languages, at least they were very useful and important. I had some skills in HTML and CSS even when I was still in 7th grade.",
   },
   {
-    role: "Web Developer",
-    company: "Digital Studio",
-    period: "2022 — 2024",
+    role: "Making my first website built in HTML and CSS",
+    period: "11 September 2022",
     description:
       "Collaborated on cross-functional teams to build client web applications with Next.js, React, and TypeScript. Optimized core web vitals and interaction performance.",
   },
   {
-    role: "Junior Frontend Engineer",
-    company: "Tech Agency",
-    period: "2021 — 2022",
+    role: "Making my first Landing page website",
+    period: "5 September 2025",
     description:
-      "Developed responsive user interfaces, implemented component libraries, and integrated RESTful APIs.",
+      "I created my first landing page website as part of a school project. This project, called TrackinID, was designed to showcase a fleet management system. It involved integrating HTML, CSS, and basic JavaScript to create an interactive and visually appealing site.",
+  },
+  {
+    role: "UI Developer",
+    period: "2020 — 2021",
+    description:
+      "Built polished interfaces for brand and marketing websites. Translated Figma designs into production-ready HTML/CSS/JS.",
+  },
+  {
+    role: "Frontend Developer",
+    period: "2019 — 2020",
+    description:
+      "Shipped core product features across a React-based SaaS platform. Worked closely with designers to improve usability and consistency.",
+  },
+  {
+    role: "Freelance Web Developer",
+    period: "2018 — 2019",
+    description:
+      "Delivered custom websites and landing pages for small businesses. Managed client relationships, timelines, and deployment workflows.",
   },
 ];
 
@@ -52,7 +65,6 @@ export function ExperienceSection() {
             >
               <div className="md:col-span-4">
                 <h3 className="text-lg font-semibold text-white mb-1">{exp.role}</h3>
-                <p className="text-sm text-[#c4c7c8]/80">{exp.company}</p>
                 <span className="inline-block mt-2 text-xs font-mono text-[#c4c7c8]/50">
                   {exp.period}
                 </span>

@@ -38,6 +38,11 @@
 html {
   scroll-behavior: smooth;
   color-scheme: dark;
+  scrollbar-width: none; /* Firefox */
+}
+
+html::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
 }
 
 body {
@@ -47,6 +52,7 @@ body {
   min-height: 100vh;
   position: relative;
   overflow-x: hidden;
+  -ms-overflow-style: none; /* IE/legacy Edge */
   selection-background-color: #ffffff;
   selection-color: #000000;
 }
