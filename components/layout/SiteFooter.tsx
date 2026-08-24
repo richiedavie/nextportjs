@@ -1,14 +1,13 @@
-import React from "react";
 import Link from "next/link";
 
 export function SiteFooter() {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
-    { label: "Github", href: "https://github.com" },
-    { label: "LinkedIn", href: "https://linkedin.com" },
-    { label: "Twitter", href: "https://twitter.com" },
-    { label: "Email", href: "mailto:hello@example.com" },
+    { label: "Github", href: "https://github.com/richiedavie" },
+    { label: "LinkedIn", href: "https://www.linkedin.com/in/jeremy-mauretz-603871401/" },
+    { label: "Instagram [Tech Accounts]", href: "https://www.instagram.com/jerryarchlinux/" },
+    { label: "Email", href: "jusjeremy64@gmail.com" },
   ];
 
   return (
@@ -24,7 +23,7 @@ export function SiteFooter() {
 
         {/* Copyright / Metadata */}
         <div className="uppercase tracking-widest font-mono text-[10px] text-[#c4c7c8]/50">
-          &copy; {currentYear} Jerry. All rights reserved.
+          &copy; {currentYear} Jerry. there's no fkin copyright lmao.
         </div>
 
         {/* Social Links */}
