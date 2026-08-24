@@ -7,7 +7,7 @@ export function AboutSection() {
         <div className="group relative w-full max-w-md sm:max-w-lg lg:max-w-[480px] shrink-0">
           <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-white/10 bg-[#0e0e0e] card-glow">
             <Image
-              src="/images/avatar.webp"
+              src="/images/WhatsApp Image 2026-07-20 at 18.51.15.jpeg"
               alt="Portrait of Jerry"
               fill
               sizes="(max-width: 640px) 100vw, (max-width: 1024px) 512px, 480px"
@@ -27,7 +27,7 @@ export function AboutSection() {
               Hello! My name is Jer! , but you can call me Jeremy. I am passionate about coding and constantly eager to learn new technologies and improve my skills. I enjoy exploring different programming languages and frameworks, and I am particularly skilled in HTML, CSS, JavaScript, and Bootstrap. Over time, I have developed a strong foundation in web development and love creating interactive and user-friendly websites. When I'm not coding, I like to experiment with mini-games and other creative projects. I am always excited to take on new challenges and grow as a developer.
             </p>
             <p>
-              I use arch btw
+             i use arch btw
             </p>
           </div>
         </div>
