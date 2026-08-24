@@ -20,21 +20,21 @@ const experiences: ExperienceItem[] = [
   },
   {
     role: "Making my first Landing page website",
-    period: "5 September 2025",
+    period: "16 June 2025",
     description:
-      "I created my first landing page website as part of a school project. This project, called TrackinID, was designed to showcase a fleet management system. It involved integrating HTML, CSS, and basic JavaScript to create an interactive and visually appealing site.",
+      "I'm diving into cross-platform mobile development by building my very first application using Flutter and Dart. Through this hands-on experiment, I am learning to design responsive UIs, manage application state, and leverage Flutter's widget tree to create a smooth, high-performance user experience.",
   },
   {
-    role: "UI Developer",
-    period: "2020 — 2021",
+    role: "Creating a Product Animation in Blender",
+    period: "June 2025",
     description:
-      "Built polished interfaces for brand and marketing websites. Translated Figma designs into production-ready HTML/CSS/JS.",
+      "I created a product-animation project in Blender, experimenting with studio lighting, camera angles, and smooth motion to present a product from multiple perspectives.",
   },
   {
-    role: "Frontend Developer",
-    period: "2019 — 2020",
+    role: "Building a Full-Stack Downtime Analytics Platform",
+    period: "August 2026",
     description:
-      "Shipped core product features across a React-based SaaS platform. Worked closely with designers to improve usability and consistency.",
+      "I specialize in building high-performance, scalable web applications using the App Router architecture, Server and Client Components, Server Actions, and optimized API Routes. My mastery spans seamless Server-Side Rendering (SSR) and dynamic client-side hydration, robust cookie-based authentication, type-safe data fetching, custom analytics calculations, and full integration with backend services like Supabase for secure, real-time database management.",
   },
   {
     role: "Freelance Web Developer",
