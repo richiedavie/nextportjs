@@ -1,0 +1,123 @@
+/* Top Navigation Bar Styles */
+.top-nav {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Navigation Button Styles */
+.nav-button {
+  position: relative;
+  padding: 8px 12px;
+  background: #111;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  border: 1px solid #333;
+  overflow: hidden;
+}
+
+/* Navigation Button Pseudo-Element for Hover Effect */
+.nav-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+/* Navigation Button Hover and Active States */
+.nav-button:hover, .nav-button.active {
+  background: #222;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+  transform: translateY(-2px);
+}
+
+/* Navigation Button Pseudo-Element Hover and Active States */
+.nav-button:hover::before, .nav-button.active::before {
+  opacity: 1;
+}
+
+/* Navigation Button Icon Styles */
+.nav-button i {
+  font-size: 16px;
+  margin-right: 5px;
+}
+
+/* Navigation Button Text Styles */
+.nav-button span {
+  display: inline;
+  font-size: 14px;
+}
+
+/* Search Bar Styles */
+.search-bar {
+  flex: 1;
+  max-width: 300px;
+  margin: 0 20px;
+}
+
+/* Search Bar Input Styles */
+.search-bar input {
+  width: 100%;
+  padding: 8px 12px;
+  background: #111;
+  border: 1px solid #333;
+  border-radius: 20px;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+/* Search Bar Input Focus Styles */
+.search-bar input:focus {
+  border-color: #fff;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+/* Responsive Adjustments for Mobile */
+@media (max-width: 768px) {
+  /* Top Navigation Adjustments */
+  .top-nav {
+    gap: 10px;
+  }
+
+  /* Navigation Button Mobile Styles */
+  .nav-button {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+
+  /* Navigation Button Icon Mobile Styles */
+  .nav-button i {
+    font-size: 14px;
+    margin-right: 3px;
+  }
+
+  /* Navigation Button Text Mobile Styles */
+  .nav-button span {
+    font-size: 12px;
+  }
+
+  /* Search Bar Mobile Styles */
+  .search-bar {
+    max-width: 200px;
+    margin: 0 10px;
+  }
+}
