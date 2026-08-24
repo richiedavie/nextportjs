@@ -37,10 +37,10 @@ const experiences: ExperienceItem[] = [
       "I specialize in building high-performance, scalable web applications using the App Router architecture, Server and Client Components, Server Actions, and optimized API Routes. My mastery spans seamless Server-Side Rendering (SSR) and dynamic client-side hydration, robust cookie-based authentication, type-safe data fetching, custom analytics calculations, and full integration with backend services like Supabase for secure, real-time database management.",
   },
   {
-    role: "Freelance Web Developer",
-    period: "2018 — 2019",
+    role: "Full-Stack Web Development (still learning)",
+    period: "2026",
     description:
-      "Delivered custom websites and landing pages for small businesses. Managed client relationships, timelines, and deployment workflows.",
+      "Building and experimenting with modern web applications across the full stack, from responsive interfaces with Next.js, React, SvelteKit, and Astro to backend services, APIs, authentication, and database systems using PostgreSQL, Supabase, Laravel, and other technologies. My focus is on building applications that are fast, scalable, and cleanly structured.",
   },
 ];
 
