@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { ProjectDetailModal, ProjectDetail } from "@/components/ui/ProjectDetailModal";
+import { InteractiveProjectImage } from "@/components/ui/InteractiveProjectImage";
 
 const otherProjects: ProjectDetail[] = [
   {
@@ -108,15 +109,7 @@ export function OtherProjectsSection() {
               </div>
 
               {project.image && (
-                <div className="relative w-full aspect-[16/10] rounded-xl sm:rounded-2xl overflow-hidden bg-[#0a0a0a] border border-white/[0.08] group-hover:border-white/20 transition-colors mb-6">
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    fill
-                    sizes="(max-width: 1024px) 100vw, 560px"
-                    className="object-contain filter contrast-[1.02] brightness-95 group-hover:brightness-100 transition-all duration-500"
-                  />
-                </div>
+                <InteractiveProjectImage src={project.image} alt={project.title} />
               )}
 
               <div>
