@@ -2,16 +2,51 @@ import React from "react";
 
 const skillCategories = [
   {
-    title: "Frontend Engineering",
-    skills: ["React", "Next.js", "TypeScript", "Tailwind CSS", "HTML5/CSS3", "State Management"],
+    title: "Soft Skills",
+    skills: [
+      "Analytical Troubleshooting",
+      "Project Coordination & Asset Tracking",
+      "Technical & Visual Communication",
+      "Adaptive Problem Solving",
+      "Time Management & Prioritization",
+    ],
   },
   {
-    title: "Backend & Systems",
-    skills: ["Node.js", "REST APIs", "GraphQL", "PostgreSQL", "Database Design", "Serverless"],
+    title: "Frontend & Frameworks",
+    skills: [
+      "React",
+      "Next.js",
+      "Astro",
+      "SvelteKit",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "TypeScript",
+    ],
   },
   {
-    title: "Tooling & Design",
-    skills: ["Git & GitHub", "Vercel", "Figma", "Design Systems", "Web Performance", "Accessibility (a11y)"],
+    title: "Backend & Data",
+    skills: [
+      "Node.js",
+      "Python",
+      "PHP",
+      "Go",
+      "PostgreSQL",
+      "Supabase",
+      "MySQL",
+    ],
+  },
+  {
+    title: "Systems, Design & Tools",
+    skills: [
+      "MikroTik Routing & Administration",
+      "Local Network Deployment (LAN)",
+      "Computer Hardware Diagnostics & Assembly",
+      "OS Installation & Configuration (Windows/Linux)",
+      "Interface Design & Prototyping (Figma, Canva)",
+      "Git",
+      "VS Code",
+    ],
   },
 ];
 
@@ -21,14 +56,14 @@ export function SkillsSection() {
       <div className="max-w-[1200px] mx-auto">
         <div className="mb-16">
           <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#c4c7c8]/70 block mb-3 select-none">
-            Capabilities
+            Expertise
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white">
             Skills &amp; Technologies
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {skillCategories.map((category, idx) => (
             <div
               key={idx}
