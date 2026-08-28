@@ -77,15 +77,13 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
   const colorTweenRef = useRef<gsap.core.Tween | null>(null);
   const toggleBtnRef = useRef<HTMLButtonElement | null>(null);
   const busyRef = useRef(false);
-  const itemEntranceTweenRef = useRef<gsap.core.Tween | null>(null);
-
-  // Helper to prevent GSAP 3.12+ from throwing unhandledRejection when a tween/timeline is killed or interrupted
-  const safeTween = useCallback(<T extends gsap.core.Tween | gsap.core.Timeline>(tween: T): T => {
-    if (tween && typeof tween.then === "function") {
-      tween.then(null, () => {});
-    }
-    return tween;
-  }, []);
+// Helper to prevent GSAP 3.12+ from throwing unhandledRejection when a tween/timeline is killed or interrupted
+function safeTween<T extends gsap.core.Tween | gsap.core.Timeline>(tween: T): T {
+  if (tween && typeof (tween as unknown as Promise<unknown>).catch === "function") {
+    (tween as unknown as Promise<unknown>).catch(() => {});
+  }
+  return tween;
+}
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -127,7 +125,6 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
       closeTweenRef.current.kill();
       closeTweenRef.current = null;
     }
-    itemEntranceTweenRef.current?.kill();
 
     const itemEls = Array.from(panel.querySelectorAll<HTMLElement>(".sm-panel-itemLabel"));
     const numberEls = Array.from(
@@ -247,8 +244,6 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
 
   const playClose = useCallback(() => {
     openTlRef.current?.kill();
-    openTlRef.current = null;
-    itemEntranceTweenRef.current?.kill();
 
     const panel = panelRef.current;
     const layers = preLayerElsRef.current;
