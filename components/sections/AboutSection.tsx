@@ -7,8 +7,8 @@ export function AboutSection() {
         <div className="group relative w-full max-w-md sm:max-w-lg lg:max-w-[480px] shrink-0">
           <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-white/10 bg-[#0e0e0e] card-glow">
             <Image
-              src="/images/WhatsApp Image 2026-07-20 at 18.51.15.jpeg"
-              alt="Portrait of Jerry"
+              src="/images/stupid_spongebob.jpeg"
+              alt="SpongeBob and Patrick laughing together"
               fill
               sizes="(max-width: 640px) 100vw, (max-width: 1024px) 512px, 480px"
               className="object-cover object-center grayscale contrast-[1.05] brightness-95 transition-all duration-700 ease-out group-hover:grayscale-0 group-hover:contrast-100 group-hover:brightness-100"

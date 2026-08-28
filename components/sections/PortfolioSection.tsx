@@ -74,9 +74,6 @@ export function PortfolioSection() {
       <div className="max-w-[1200px] mx-auto">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
           <div>
-            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#c4c7c8]/70 block mb-3 select-none">
-              Featured Works
-            </span>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white">
               Portfolio
             </h2>

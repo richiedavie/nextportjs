@@ -4,11 +4,6 @@ import { TextType } from "@/components/ui/TextType";
 export function HeroCopy() {
   return (
     <div className="flex flex-col items-start">
-      {/* Eyebrow */}
-      <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#c4c7c8]/80 mb-4 select-none">
-        Web Developer &amp; Creator
-      </span>
-
       {/* Main Display Headline */}
       <TextType
         as="h1"

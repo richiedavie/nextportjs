@@ -55,9 +55,6 @@ export function SkillsSection() {
     <section id="skills" className="py-24 sm:py-32 px-4 sm:px-6 border-t border-white/[0.06]">
       <div className="max-w-[1200px] mx-auto">
         <div className="mb-16">
-          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#c4c7c8]/70 block mb-3 select-none">
-            Expertise
-          </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white">
             Skills &amp; Technologies
           </h2>
