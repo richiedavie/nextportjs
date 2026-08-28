@@ -23,7 +23,7 @@ export function SiteFooter() {
 
         {/* Copyright / Metadata */}
         <div className="uppercase tracking-widest font-mono text-[10px] text-[#c4c7c8]/50">
-          &copy; {currentYear} Jerry. there's no fkin copyright lmao.
+          &copy; {currentYear} Jerry. there&apos;s no fkin copyright lmao.
         </div>
 
         {/* Social Links */}

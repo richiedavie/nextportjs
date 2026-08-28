@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import Image from "next/image";
 import { ProjectDetailModal, ProjectDetail } from "@/components/ui/ProjectDetailModal";
 import { InteractiveProjectImage } from "@/components/ui/InteractiveProjectImage";
 
