@@ -93,6 +93,16 @@ body {
   box-shadow: 0 0 60px -5px rgba(255, 255, 255, 0.12);
 }
 
+.text-type-cursor {
+  animation: text-type-cursor-blink 1s ease-in-out infinite alternate;
+}
+
+@keyframes text-type-cursor-blink {
+  to {
+    opacity: 0;
+  }
+}
+
 /* Reduced motion preference */
 @media (prefers-reduced-motion: reduce) {
   html {

@@ -9,7 +9,7 @@ export function SiteHeader() {
         {/* Brand */}
         <Link
           href="/"
-          className="text-sm font-semibold tracking-tight text-white hover:text-[#c4c7c8] transition-colors flex items-center gap-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 rounded-lg px-2 py-1"
+          className="text-xl font-semibold tracking-tight text-white hover:text-[#c4c7c8] transition-colors flex items-center gap-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 rounded-lg px-2 py-1"
         >
           <span>my port</span>
         </Link>
