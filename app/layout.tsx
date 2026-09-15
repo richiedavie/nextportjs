@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
+import { BackgroundGrid } from "@/components/ui/BackgroundGrid";
 
 export const metadata: Metadata = {
   title: "my port — Jerry | Web Developer & Creator",
@@ -30,7 +31,7 @@ export default function RootLayout({
       className={`h-full antialiased dark`}
     >
       <body className="min-h-full flex flex-col bg-[#050505] text-white selection:bg-white selection:text-black">
-        <div className="fixed inset-0 bg-grid-dots pointer-events-none opacity-40 z-0" />
+        <BackgroundGrid />
         <div className="relative z-10 flex flex-col min-h-screen">
           {children}
         </div>

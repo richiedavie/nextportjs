@@ -1,4 +1,3 @@
-import React from "react";
 import { StaggeredMenu, StaggeredMenuItem, StaggeredMenuSocialItem } from "@/components/navigation/StaggeredMenu";
 
 const menuItems: StaggeredMenuItem[] = [
