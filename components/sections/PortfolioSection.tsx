@@ -3,13 +3,27 @@ import Image from "next/image";
 
 interface PortfolioItem {
   title: string;
-  date: string;
+  date?: string;
   description: string;
   image: string;
   alt: string;
 }
 
 const portfolioItems: PortfolioItem[] = [
+  {
+    title: "BarberCraft",
+    description:
+      "BarberCraft is a web platform that connects barbershops with freelance barbers (capsters) in Indonesia. Barbershop owners post daily shifts and review applicants, while capsters browse open shifts, apply, and track their applications. Built with Next.js, TypeScript, Tailwind CSS, Prisma, and PostgreSQL.",
+    image: "/images/BarberCraft.png",
+    alt: "BarberCraft platform",
+  },
+  {
+    title: "LogDowntime",
+    description:
+      "A full-stack, multi-site incident logging and network downtime monitoring platform built with Next.js, NestJS, PostgreSQL, and Prisma ORM. It streamlines outage reporting, automates downtime tracking, categorizes root causes, and provides operational analytics. Containerized with Docker and deployed via Coolify.",
+    image: "/images/LogDowntime.png",
+    alt: "LogDowntime incident monitoring platform",
+  },
   {
     title: "My first Landing Page – TrackinID",
     date: "September 2025",
@@ -95,9 +109,11 @@ export function PortfolioSection() {
                 <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-white">
                   {item.title}
                 </h3>
-                <p className="text-xs sm:text-sm text-[#c4c7c8]/70 mt-1">
-                  {item.date}
-                </p>
+                {item.date && (
+                  <p className="text-xs sm:text-sm text-[#c4c7c8]/70 mt-1">
+                    {item.date}
+                  </p>
+                )}
               </div>
 
               {/* Description container with subtle scroll if long */}
