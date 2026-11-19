@@ -1,4 +1,5 @@
 import { StaggeredMenu, StaggeredMenuItem, StaggeredMenuSocialItem } from "@/components/navigation/StaggeredMenu";
+import { ThemeToggle } from "@/components/navigation/ThemeToggle";
 
 const menuItems: StaggeredMenuItem[] = [
   { label: "Home", ariaLabel: "Go to home section", link: "#home" },
@@ -25,14 +26,15 @@ export function SiteHeader() {
       socialItems={socialItems}
       displaySocials={true}
       displayItemNumbering={true}
-      menuButtonColor="#ffffff"
-      openMenuButtonColor="#ffffff"
+      menuButtonColor="var(--nav-foreground, #ffffff)"
+      openMenuButtonColor="var(--nav-foreground, #ffffff)"
       changeMenuColorOnOpen={true}
       colors={["#141414", "#222222", "#0a0a0a"]}
-      accentColor="#ffffff"
+      accentColor="var(--nav-accent, #ffffff)"
       logoText="my port"
       isFixed={true}
     >
+      <ThemeToggle />
       <a
         href="images/CV ATS Jeremy Mauretz.pdf"
         target="_blank"

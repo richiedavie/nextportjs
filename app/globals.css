@@ -59,6 +59,103 @@ body {
   selection-color: #000000;
 }
 
+html.theme-light {
+  color-scheme: light;
+  --background: #f4f4f5;
+  --foreground: #18181b;
+  --foreground-muted: #52525b;
+  --nav-foreground: #18181b;
+  --nav-accent: #18181b;
+}
+
+.theme-icon-moon {
+  display: none;
+}
+
+html.theme-light .theme-icon-sun {
+  display: none;
+}
+
+html.theme-light .theme-icon-moon {
+  display: block;
+}
+
+html.theme-light body {
+  background-color: var(--background) !important;
+  color: var(--foreground) !important;
+}
+
+html.theme-light body [class*="text-white"] {
+  color: #18181b !important;
+}
+
+html.theme-light body [class*="text-[#c4c7c8]"],
+html.theme-light body [class*="text-zinc-"] {
+  color: #52525b !important;
+}
+
+html.theme-light body [class*="bg-[#0"],
+html.theme-light body [class*="bg-zinc-950/45"] {
+  background-color: rgba(255, 255, 255, 0.84) !important;
+}
+
+html.theme-light body [class*="bg-white/"] {
+  background-color: rgba(24, 24, 27, 0.035) !important;
+}
+
+html.theme-light body [class~="bg-white"][class~="text-black"] {
+  background-color: #18181b !important;
+  color: #ffffff !important;
+}
+
+html.theme-light body [class*="border-white"] {
+  border-color: rgba(24, 24, 27, 0.14) !important;
+}
+
+html.theme-light body > div:first-child {
+  filter: invert(1);
+  opacity: 0.55;
+}
+
+html.theme-light .sm-logo-text,
+html.theme-light .sm-toggle,
+html.theme-light .sm-panel-item {
+  color: #18181b !important;
+}
+
+html.theme-light .sm-logo-text:hover,
+html.theme-light .sm-panel-item:hover {
+  color: #52525b !important;
+}
+
+html.theme-light .sm-toggle {
+  background: rgba(24, 24, 27, 0.035);
+  border-color: rgba(24, 24, 27, 0.14);
+}
+
+html.theme-light .sm-toggle:hover {
+  background: rgba(24, 24, 27, 0.08);
+  border-color: rgba(24, 24, 27, 0.24);
+}
+
+html.theme-light .staggered-menu-panel,
+html.theme-light .sm-prelayer {
+  background: #f4f4f5 !important;
+}
+
+html.theme-light .staggered-menu-panel {
+  border-color: rgba(24, 24, 27, 0.14);
+  box-shadow: -20px 0 50px rgba(24, 24, 27, 0.12);
+}
+
+html.theme-light .sm-socials-title {
+  color: rgba(24, 24, 27, 0.52);
+}
+
+html.theme-light .sm-socials-link {
+  color: #52525b;
+}
+
 /* Subtle dot grid background */
 .bg-grid-dots {
   background-image: radial-gradient(
