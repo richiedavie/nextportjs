@@ -6,6 +6,7 @@ import { PortfolioSection } from "@/components/sections/PortfolioSection";
 import { OtherProjectsSection } from "@/components/sections/OtherProjectsSection";
 import { ExperienceSection } from "@/components/sections/ExperienceSection";
 import { SkillsSection } from "@/components/sections/SkillsSection";
+import { ListeningSection } from "@/components/ListeningSection";
 import { ContactSection } from "@/components/sections/ContactSection";
 import { NowPlayingPill } from "@/components/NowPlayingPill";
 
@@ -20,6 +21,7 @@ export default function Home() {
         <OtherProjectsSection />
         <ExperienceSection />
         <SkillsSection />
+        <ListeningSection />
         <ContactSection />
       </main>
       <NowPlayingPill />
