@@ -95,12 +95,13 @@ html.theme-light body [class*="text-zinc-"] {
 }
 
 html.theme-light body [class*="bg-[#0"],
-html.theme-light body [class*="bg-zinc-950/45"] {
-  background-color: rgba(255, 255, 255, 0.84) !important;
+html.theme-light body [class*="bg-zinc-950/"],
+html.theme-light body [class*="bg-black/"] {
+  background-color: rgba(255, 255, 255, 0.9) !important;
 }
 
 html.theme-light body [class*="bg-white/"] {
-  background-color: rgba(24, 24, 27, 0.035) !important;
+  background-color: rgba(255, 255, 255, 0.58) !important;
 }
 
 html.theme-light body [class~="bg-white"][class~="text-black"] {
@@ -110,6 +111,14 @@ html.theme-light body [class~="bg-white"][class~="text-black"] {
 
 html.theme-light body [class*="border-white"] {
   border-color: rgba(24, 24, 27, 0.14) !important;
+}
+
+html.theme-light body [class*="shadow-"] {
+  box-shadow: 0 8px 28px rgba(24, 24, 27, 0.12) !important;
+}
+
+html.theme-light body [class*="shadow-"] {
+  box-shadow: 0 8px 28px rgba(24, 24, 27, 0.12) !important;
 }
 
 html.theme-light body > div:first-child {

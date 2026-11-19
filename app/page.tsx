@@ -7,6 +7,7 @@ import { OtherProjectsSection } from "@/components/sections/OtherProjectsSection
 import { ExperienceSection } from "@/components/sections/ExperienceSection";
 import { SkillsSection } from "@/components/sections/SkillsSection";
 import { ListeningSection } from "@/components/ListeningSection";
+import { DiscordProfileCard } from "@/components/DiscordProfileCard";
 import { ContactSection } from "@/components/sections/ContactSection";
 import { NowPlayingPill } from "@/components/NowPlayingPill";
 
@@ -22,6 +23,7 @@ export default function Home() {
         <ExperienceSection />
         <SkillsSection />
         <ListeningSection />
+        <DiscordProfileCard />
         <ContactSection />
       </main>
       <NowPlayingPill />

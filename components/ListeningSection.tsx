@@ -20,7 +20,7 @@ export function ListeningSection() {
   return (
     <section
       id="listening"
-      className="border-t border-white/[0.06] px-4 py-24 sm:px-6 sm:py-32"
+      className="border-t border-white/[0.06] px-4 pb-8 pt-24 sm:px-6 sm:pb-10 sm:pt-32"
       aria-labelledby="listening-heading"
     >
       <div className="mx-auto w-full max-w-[1200px]">

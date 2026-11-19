@@ -11,11 +11,29 @@ export type LanyardPlayback = {
   songUrl?: string;
   progressMs: number;
   durationMs: number;
+  discordUser?: DiscordUser;
+  discordStatus?: "online" | "idle" | "dnd" | "offline";
+};
+
+export type DiscordUser = {
+  id: string;
+  avatar: string | null;
+  avatar_decoration_data?: { asset: string } | null;
+  username?: string;
+  global_name?: string | null;
+  public_flags?: number;
+  primary_guild?: {
+    identity_guild_id: string;
+    badge: string;
+    tag: string;
+  } | null;
 };
 
 type LanyardResponse = {
   data?: {
     listening_to_spotify?: boolean;
+    discord_user?: DiscordUser;
+    discord_status?: "online" | "idle" | "dnd" | "offline";
     spotify?: {
       song: string;
       artist: string;
@@ -36,6 +54,10 @@ const initialPlayback: LanyardPlayback = {
   isPlaying: false,
   progressMs: 0,
   durationMs: 0,
+};
+const initialProfile = {
+  discordUser: undefined,
+  discordStatus: "offline" as const,
 };
 
 let playback = initialPlayback;
@@ -83,8 +105,12 @@ async function pollLanyard() {
 
     const payload: LanyardResponse = await response.json();
     const spotify = payload?.data?.spotify;
+    const profile = {
+      discordUser: payload?.data?.discord_user,
+      discordStatus: payload?.data?.discord_status ?? "offline",
+    };
     if (!payload?.data?.listening_to_spotify || !spotify) {
-      publish(initialPlayback);
+      publish({ ...initialPlayback, ...profile });
       return;
     }
 
@@ -101,9 +127,12 @@ async function pollLanyard() {
         durationMs
       ),
       durationMs,
+      ...profile,
     });
   } catch {
-    if (!controller?.signal.aborted) publish(initialPlayback);
+    if (!controller?.signal.aborted) {
+      publish({ ...initialPlayback, ...initialProfile });
+    }
   }
 }
 
