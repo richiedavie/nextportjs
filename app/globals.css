@@ -165,6 +165,33 @@ html.theme-light .sm-socials-link {
   color: #52525b;
 }
 
+html.theme-light .discord-profile-card [class*="text-zinc-"],
+html.theme-light .discord-profile-card [class*="text-white"],
+html.theme-light .discord-profile-card [class*="text-sky-"] {
+  color: #ffffff !important;
+}
+
+html.theme-light .discord-profile-card .discord-connections-panel [class*="text-zinc-"],
+html.theme-light .discord-profile-card .discord-connections-panel [class*="text-white"] {
+  color: #18181b !important;
+}
+
+html.theme-light .discord-profile-card .discord-profile-badges {
+  background-color: #18181b !important;
+  border-color: rgba(255, 255, 255, 0.25) !important;
+  color: #ffffff !important;
+}
+
+html.theme-light .discord-profile-card .discord-message-button {
+  background-color: #18181b !important;
+  border-color: rgba(24, 24, 27, 0.4) !important;
+  color: #ffffff !important;
+}
+
+html.theme-light .discord-profile-card .discord-message-button:hover {
+  background-color: #303036 !important;
+}
+
 /* Subtle dot grid background */
 .bg-grid-dots {
   background-image: radial-gradient(

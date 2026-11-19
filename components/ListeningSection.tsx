@@ -28,7 +28,7 @@ export function ListeningSection() {
           id="listening-heading"
           className="mb-8 text-3xl font-bold tracking-tight text-white sm:text-4xl"
         >
-          What&apos;s he listens to:
+          What he listens on:
         </h2>
 
         {activePlayback ? (
