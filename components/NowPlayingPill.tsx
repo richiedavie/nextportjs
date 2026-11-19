@@ -117,16 +117,25 @@ export function NowPlayingPill() {
   }, [playback?.isPlaying, playback?.durationMs]);
 
   const shellClassName =
-    "group flex w-full max-w-[540px] items-center justify-between gap-4 rounded-3xl border border-white/15 bg-zinc-950/45 px-5 py-3 shadow-[0_8px_32px_rgba(0,0,0,0.65)] backdrop-blur-md transition-all duration-300 hover:border-white/30";
+    "group flex w-full items-center justify-between gap-4 rounded-3xl border border-white/15 bg-zinc-950/45 px-5 py-3 shadow-[0_8px_32px_rgba(0,0,0,0.65)] backdrop-blur-md transition-all duration-300 hover:border-white/30";
 
   const activePlayback =
     playback?.isPlaying && playback.title && playback.artist && playback.songUrl
       ? playback
       : null;
+  const trackTextLength = activePlayback
+    ? Math.max(
+        Array.from(`${activePlayback.artist} - ${activePlayback.title}`).length,
+        Array.from(activePlayback.album ?? "").length
+      )
+    : 0;
+  const pillWidth = activePlayback
+    ? Math.min(900, 540 + Math.max(0, trackTextLength - 34) * 7)
+    : 540;
 
   return (
     <aside
-      className="fixed inset-x-0 bottom-0 z-40 flex justify-center px-4 pb-[max(16px,env(safe-area-inset-bottom))] sm:px-6"
+      className="fixed inset-x-0 bottom-0 z-40 flex justify-center pb-[max(16px,env(safe-area-inset-bottom))]"
       aria-label="Spotify now playing"
     >
       {activePlayback ? (
@@ -135,6 +144,7 @@ export function NowPlayingPill() {
           target="_blank"
           rel="noopener noreferrer"
           className={shellClassName}
+          style={{ width: `min(calc(100vw - 32px), ${pillWidth}px)` }}
           aria-label={`Open ${activePlayback.title} by ${activePlayback.artist} on Spotify`}
         >
           <div className="w-[104px] shrink-0">
@@ -177,7 +187,12 @@ export function NowPlayingPill() {
           )}
         </a>
       ) : (
-        <div className={`${shellClassName} cursor-default`} role="status" aria-live="polite">
+        <div
+          className={`${shellClassName} cursor-default`}
+          style={{ width: `min(calc(100vw - 32px), ${pillWidth}px)` }}
+          role="status"
+          aria-live="polite"
+        >
           <span
             className="h-1.5 w-1.5 shrink-0 rounded-full bg-zinc-500"
             aria-hidden="true"
