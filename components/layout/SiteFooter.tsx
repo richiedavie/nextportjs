@@ -11,7 +11,7 @@ export function SiteFooter() {
   ];
 
   return (
-    <footer className="w-full border-t border-white/[0.08] bg-[#050505]/80 backdrop-blur-sm py-8 px-4 sm:px-6">
+    <footer className="w-full bg-[#050505]/80 backdrop-blur-sm py-8 px-4 sm:px-6">
       <div className="max-w-[1200px] mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-xs text-[#c4c7c8]/60">
         {/* Brand */}
         <Link

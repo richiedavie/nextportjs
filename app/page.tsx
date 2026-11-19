@@ -7,7 +7,6 @@ import { OtherProjectsSection } from "@/components/sections/OtherProjectsSection
 import { ExperienceSection } from "@/components/sections/ExperienceSection";
 import { SkillsSection } from "@/components/sections/SkillsSection";
 import { ContactSection } from "@/components/sections/ContactSection";
-import { SiteFooter } from "@/components/layout/SiteFooter";
 import { NowPlayingPill } from "@/components/NowPlayingPill";
 
 export default function Home() {
@@ -24,7 +23,6 @@ export default function Home() {
         <ContactSection />
       </main>
       <NowPlayingPill />
-      <SiteFooter />
     </>
   );
 }
