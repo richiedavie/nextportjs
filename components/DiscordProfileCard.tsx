@@ -22,7 +22,7 @@ const connections = [
         subtitle: "Member since Apr 17, 2022",
         href: "https://steamcommunity.com/id/richiedavie",
     },
-    { platform: "YouTube", username: "Richiee", href: "https://www.youtube.com/@Richiee" },
+    { platform: "YouTube", username: "Richiee", href: "https://www.youtube.com/@RitzDavie" },
 ];
 
 export function DiscordProfileCard() {
@@ -44,7 +44,7 @@ export function DiscordProfileCard() {
                 >
                     My Discord Profile
                 </h2>
-        <article className="discord-profile-card group relative w-full overflow-hidden rounded-3xl border border-white/15 bg-zinc-950/50 p-6 shadow-[0_8px_32px_rgba(0,0,0,0.65)] backdrop-blur-md transition-all duration-300 hover:border-white/25 sm:p-8">
+                <article className="discord-profile-card group relative w-full overflow-hidden rounded-3xl border border-white/15 bg-zinc-950/50 p-6 shadow-[0_8px_32px_rgba(0,0,0,0.65)] backdrop-blur-md transition-all duration-300 hover:border-white/25 sm:p-8">
                     <Image
                         src="/images/MyWaifu.png"
                         alt=""
